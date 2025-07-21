@@ -37,7 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ calls, contacts, onContactSelect }) =
   // ];
 
   return (
-    <div className="w-80 bg-[#EFF1F2] border-r border-gray-200 h-screen flex flex-col">
+    <div className="hidden w-80 bg-[#EFF1F2] border-r border-gray-200 h-screen md:flex flex-col">
       {/* Tabs */}
       <div className="overflow-hidden pt-6 pb-2">
         {/* <Tabs

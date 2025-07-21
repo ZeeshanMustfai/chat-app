@@ -66,7 +66,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({ messages, onSendMessage }) => {
       </div>
 
       {/* Message Input */}
-      <Card className="border-t border-gray-200 p-4 !rounded-none shadow-lg">
+      <Card className="border-t border-gray-200 !rounded-none shadow-lg">
         <div className="flex items-center space-x-3">
           <div>
             <Button

@@ -26,9 +26,9 @@ const Header: React.FC<HeaderProps> = ({ currentContact }) => {
   return (
     <div className="bg-white border-b border-gray-200 ">
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-3 group flex-1 px-4 py-3">
+        <div className="hidden md:flex items-center space-x-3 group flex-1 px-4 py-3 flex-wrap">
           <div>
-            <div className="text-[16px] text-black">Select your number</div>
+            <div className="text-[10px] md:text-[16px] text-black">Select your number</div>
             <Dropdown menu={{ items: numberItems }} trigger={['click']}>
               <Button className="purple-gradient !text-white shadow-sm !rounded-full px-4 hover:from-fuchsia-600 hover:to-blue-600 transition-all">
                 All Numbers <DownOutlined />
@@ -79,7 +79,7 @@ const Header: React.FC<HeaderProps> = ({ currentContact }) => {
           </div>
         </div>
 
-        <div className="flex items-center space-x-2 flex-1 justify-end px-4 py-3">
+        <div className="hidden md:flex items-center space-x-2 flex-1 justify-end px-4 py-3">
           <Button
             type="text"
             icon={<Image src="/chat/info.svg" alt="Send" width={20} height={20} />}

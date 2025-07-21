@@ -139,3 +139,6 @@
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+.ant-card-body {
+  padding: 10px !important;
+}

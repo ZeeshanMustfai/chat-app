@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
+import { calls, contacts } from '@/constants';
 import ChatArea from './chat-area';
 import Header from './chat-header';
 import Sidebar from './chat-side-bar';
 import SidebarRight from './chat-side-bar-right';
 
-import type { CallEntry, Contact, Message } from '../types';
+import type { Contact, Message } from '../types';
 
 const MainLayout: React.FC = () => {
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
@@ -47,24 +48,6 @@ const MainLayout: React.FC = () => {
       isSent: false,
     },
   ]);
-
-  // Mock data
-  const calls: CallEntry[] = [
-    { id: '1', name: 'Kim Williamson', time: '2:34pm', status: 'missed', initials: 'KW', color: 'bg-purple-400' },
-    { id: '2', name: 'Shane Watson', time: '2:34pm', status: 'outgoing', initials: 'SW', color: 'bg-green-400' },
-    { id: '3', name: 'Hazellwood', time: '2:34pm', status: 'incoming', initials: 'H', color: 'bg-pink-400' },
-    { id: '4', name: 'Zunaira Butt', time: '2:34pm', status: 'incoming', initials: 'ZB', color: 'bg-pink-400' },
-    { id: '5', name: 'Kamran Masood', time: '2:34pm', status: 'outgoing', initials: 'KM', color: 'bg-purple-400' },
-  ];
-
-  const contacts: Contact[] = [
-    { id: '1', name: 'Alina', phone: '092345784521', initials: 'A', color: 'bg-blue-400' },
-    { id: '2', name: 'Anna', phone: '092345784521', initials: 'A', color: 'bg-green-400' },
-    { id: '3', name: 'Brown', phone: '092345784521', initials: 'B', color: 'bg-orange-400' },
-    { id: '4', name: 'Ben', phone: '092345784521', initials: 'B', color: 'bg-purple-400' },
-    { id: '5', name: 'Cutting', phone: '092345784521', initials: 'C', color: 'bg-pink-400' },
-    { id: '6', name: 'Carl', phone: '092345784521', initials: 'C', color: 'bg-indigo-400' },
-  ];
 
   const handleContactSelect = (contact: Contact) => {
     setSelectedContact(contact);
