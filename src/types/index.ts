@@ -1,30 +1,25 @@
-export interface User {
-  _id: string;
+export interface Contact {
+  id: string;
   name: string;
-  email: string;
+  phone: string;
+  avatar?: string;
+  initials: string;
+  color: string;
 }
 
-export interface Member extends User {
-  dietaryRestrictions: string;
+export interface CallEntry {
+  id: string;
+  name: string;
+  time: string;
+  status: 'missed' | 'incoming' | 'outgoing';
+  avatar?: string;
+  initials: string;
+  color: string;
 }
 
-export interface RegisterRequest extends Pick<User, 'name' | 'email'> {
-  password: string;
-}
-
-export interface RegisterResponse {
-  message: string;
-  user: User;
-}
-
-export type LoginRequest = Pick<RegisterRequest, 'email' | 'password'>;
-
-export interface LoginResponse extends RegisterResponse {
-  accessToken: string;
-}
-
-export interface GetMealDetailsResponse {
-  meals: string[];
-  createdAt: string;
-  updatedAt: string;
+export interface Message {
+  id: string;
+  text: string;
+  time: string;
+  isSent: boolean;
 }
